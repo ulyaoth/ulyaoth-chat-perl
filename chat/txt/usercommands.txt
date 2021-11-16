@@ -1,0 +1,149 @@
+<b>Regular User Commands</b>
+
+/away		        puts user on AWAY MODE (toggle)
+/bg [hex]		sets background color (default is white)
+/color [hex]		sets font color
+/colorbox		displays clickable box with different colors
+/comment [text] 	adds a comment after nick on /who list
+/d [text]		describes an action or feeling
+/fl		        flushes private message buffer
+/font			set font type up to 15 different font types
+/forward [nick]		forwards all private messages to Operator
+/frames		        allows user to chat with frames or without frames (toggle)
+/friends		displays form with two options that will help you find other people with the same interest
+/ig [nick]		ignores a user's private messages
+/ig - [nick]		removes user from ignore list
+/intro [message]	sets an intro message
+/intro [nick]		sends intro message to given nick
+/intro -		unsets intro message
+/ips [0-4]		allow/disallow ip switching, 0 = allow switching 4 = disallow (max sec.)
+/join [room]	        enter another room  *Operators can create new rooms*
+/list 		        displays a list of active rooms
+/menu		        displays a menu of the room list, this affects chat speed (toggle)
+/msg [nick] [text] 	sends a private message
+/ncolor			set nickname color
+/nfont			nickname font type up to 15 different types
+/nick [new nick]	changes a user's nickname
+/null			prevents Operators from summoning
+/quit [text]	        ends the current chat session *Operators may leave a signout message*
+/read 		        displays the bulletin board
+/sb [room]		scrolls back last 50 posts
+/send [nick]		send file to given nick, this is still beta version, it might be restricted for Ops use only
+/speed [10-800]		set refreshing speed when you are on frames mode, (works only with frames)
+/text [hex]		sets the color of server messages (default color is black)
+/who [room]		displays a list of current users in the room
+/whoall		        displays a list of all currents users
+/whois [nick]		displays the current status of user, ip add, idle time etc.
+/images			displays list of current images available for use
+
+
+Note: Double slash commands are shared betwen Operators and granted users.
+
+//al [text]		bounces text from side to side in current room 
+//b  [text]		displays text in blue
+//bl [text]		makes text blink
+//bo [text]		displays text in bold
+//g  [text]		displays text in green
+//it [text]		displays text in italics
+//mk [text]		scrolls text in current room 
+//r  [text]		displays text in red
+//sp [text]		displays text in upper script style
+//st [text]		displays text in strikethrough style
+//su [text]		displays text in lower script style
+//un [text]		underlines text
+//w  [text]		displays text in white
+//y  [text]		displays text in yellow
+
+
+Note: Double slash action commands are shared betwen Operators and granted users.
+
+
+//smiles [nick]		send smile to someone or to the whole room if used alone, you can add text after nick too
+//hug [nick]		send a hug to someone or to the whole room if used alone, you can add text after nick too
+//hate [nick]		action command, similar to smile or hug, hate everyone in the room or specific person, you may add text too
+//smiles [nick]		send smile to someone or to the whole room if used alone, you can add text after nick too
+//brb [nick]		say be right back someone or to the whole room if used alone, you can add text after nick too
+//bye [nick]		say bye someone or to the whole room if used alone, you can add text after nick too
+//chat [nick]		ask someone for chat or the whole room if used alone, you can add text after nick too
+//cry [nick]		cry to someone or to the whole room if used alone, you can add text after nick too
+//dance [nick]		dance for someone or for the whole room if used alone, you can add text after nick too
+//fight [nick]		fight with someone or with the whole room if used alone, you can add text after nick too
+//flower [nick]		send flower to someone or to the whole room if used alone, you can add text after nick too
+//fond [nick]		fond of someone or the whole room if used alone, you can add text after nick too
+//heart [nick]		show your heart to someone or to the whole room if used alone, you can add text after nick too
+//kiss [nick]		kiss someone or to the whole room if used alone, you can add text after nick too
+//later [nick]		look forward to catch someone later or to the whole room if used alone, you can add text after nick too
+//leaving [nick]	leaving someone or to the whole room if used alone, you can add text after nick too
+//love [nick]		send love to someone or to the whole room if used alone, you can add text after nick too
+//luck [nick]		wish luck to someone or to the whole room if used alone, you can add text after nick too
+//mabrook [nick]	say mabrook to someone or to the whole room if used alone, you can add text after nick too
+//mad [nick]		mad at someone or to the whole room if used alone, you can add text after nick too
+//miss [nick]		miss someone or to the whole room if used alone, you can add text after nick too
+//shake [nick]		shake someone's hand or to everyone's if used alone, you can add text after nick too
+//sheeshah [nick]	ask someone if they wanna have sheeshah or to the whole room if used alone, you can add text after nick too
+//shy [nick]		shy because of someone hand oror to the whole room if used alone, you can add text after nick too
+//sleepy [nick]		say to someone that you are sleepy or to the whole room if used alone, you can add text after nick too
+//smoke [nick]		wanna smoke, inform someone or the whole room if used alone, you can add text after nick too
+//sorry [nick]		you are sorry, inform someone or the whole room if used alone, you can add text after nick too
+//surprise [nick]	surprise someone or the whole room if used alone, you can add text after nick too
+//thank [nick]		thank to someone or the whole room if used alone, you can add text after nick too
+//salam [nick]		send salam to someone or to the whole room if used alone, you can add text after nick too
+//wsalam [nick]		send salam back to someone or to the whole room if used alone, you can add text after nick too
+//wave [nick]		wave to someone or to the whole room if used alone, you can add text after nick too
+//welcome [nick]	welcome someone or to the whole room if used alone, you can add text after nick too
+//yell[nick]		yell at someone or the whole room if used alone, you can add text after nick too
+
+
+
+<b>Operator Commands</b>
+
+All Regular User commands, plus the following:
+
+
+/abuse [nick]		reports Operator abuse to Comm and Staff members
+/account		view your account details and/or change your password
+/auto [message]		set auto replay message, you can also use /pref to save it
+/ban [nick] [reason]	bans user from the chat (bans are longer than kicks)		
+/callcomm		request help from comm ops currently online
+/clear [text]		clears all posts with matching text *6*
+/comm [message]		posts a message on the comm board 
+//fade [hex] [hex]	fades from [hex] to [hex] color
+//fade3 [hex][hex][hex]	fades from [hex] to [hex] to [hex] color
+/grant [user]		grants user double slash commands
+/icq			displays icq service form, you can now page icq users
+/id [nick]		identifies an Operator by ID value *1-30*
+/igmail [nick]	        ignores cmail from Operator
+/images			displays list of images
+/img [nick] [url]	sends an image or link in /msg
+/kick [nick]		temporarily kicks a user off the chat
+/link [url] [text]	allows Operator to create a link within text
+/lock 		        locks the current room (private rooms only)
+/logs		        displays a record of all recent /kicks and /bans (toggle)
+/mail [nick]		sends cmail to an Operator
+/mute [nick]		prevent regular user from posting on the main, use /mute - to remove
+/noproxy		denies proxy entry for 30 minutes *15*
+/noproxy -		allows proxy entry *15*
+/ops		        hides Operator flags (toggle)
+/pic [url]		sets a link on your nick
+/post [text]		posts a message on the bulletin board
+/pref		        saves Ops preferences, such as /color /comment /pic etc.
+/rose5 [text]		displays a text with 5 roses
+/rose [hex] [text]      displays a text with hex color roses
+/sms			displays sms service form
+/stats			view current server statistic *4*
+/summon [nick]	        summons a user into current room
+/time			check list of first 20 operators with longest time spent on chat
+/unban [nick] or [ip]	unbans user or user's ip address
+/unlock		        unlocks the current room (private rooms only)
+/vote 			check voting list
+/vote [nick]		vote for some operator
+/wait [nick]		adds a user to Wait List
+/wait - [nick]		removes user from Wait List
+/warn [nick] [reason]	sends a user kick warning
+
+
+<b>IMPORTANT NOTE: it is possible for users to use different colors in message.
+Example , typing: hello //ff55ffhow //ffff55are //cc55ccyou? will display: hello <font color=ff55ff>how</font> <font color=ffff55>are</font> <font color=cc55cc>you?</font>. 
+We hope you enjoy this new feature.</b>
+
+

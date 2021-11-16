@@ -1,0 +1,16 @@
+<b>Comm Operator Commands</b>
+
+All Regular User and Operator commands, plus the following:
+
+
+/read			when comm Ops type read they will be able to delete specific messages
+/clear -		clears the whole room
+/clearbuffer		check all cleared messages that day
+/deop [nick]		deactivates a user's Operator status
+/deoplist		displays a list of deoped Operators
+/reop [nick]		reactivates a user's Operator status
+/clear [text]		Comm ops will silently clear from the main text matching word
+/comm           	THE MOST IMPORTANT COMM COMMAND, you will get all important comm links
+/id [nick]		id for comm ops is MORE advanced, it will give you all available information about that [nick]
+
+

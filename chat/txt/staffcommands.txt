@@ -1,0 +1,40 @@
+<b>Staff Operator Commands</b>
+
+All Regular User commands, Operator commands, and Comm commands, plus the following:
+
+
+/add [code]      	add Ops to Ops database who previously signed up for Ops account and has code number
+/editann	 	edit announcements from the entrance page
+/ip [text]	 	mask ip address with some [text]
+/lev [nick][1-15]	downgrade or upgrade Operator level up til level 15
+/mops		 	message all ops currently online
+/musers	        	message all users currently online
+/opslist            	view current list of all ops in database
+/opsmail		send c-mail to all Ops at once
+/reboot			deletes all users data and reboots the server
+/restore [nick]	        restores an Operator's priviledges
+/roomann [message]	posts message throught all the active rooms
+/suspend [nick]	        suspends an Operator's priviledges
+/suspendlist		displays a list of suspended Operators
+/ublock			flush ban list, kick list and turn noproxy off
+
+
+<b>Admin Commands</b>
+
+All Regular User commands, Operator commands, and Comm commands, and Staff commands, plus the following:
+
+/ann [text]		adds an announcement on the entrance page
+/uann [message]		post login announcement for users only
+/opsann [message]	post login announcement for operators only
+/editann		edit announcements from the entrance page
+/acc [nick]		view or edit Operator account information
+/email [1-200]		send email to all operators with given rank
+/email comm		send email to all current committee members
+/email deopped		send email to all deopped operators
+/email staff		send email to all current staff members
+/email suspended	send email to all suspended operators
+/voting reset		reset voting system and start a new month
+/voting mr [nick]	set nick as mr of that month
+/voting ms [nick]	set nick as ms of that month
+/chk reset		reset time system and start a new month
+/chk [nick]		check operators time spent online that month
