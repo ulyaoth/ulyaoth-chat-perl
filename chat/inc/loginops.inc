@@ -23,7 +23,7 @@ $host_name = $ENV{'REMOTE_ADDR'};
 
 $ip = "$ip1.$ip2.$ip3";
 
-dbmopen(%OPS,"$root/ops/ops/$DATA{'n'}",0777);
+dbmopen(%OPS,"$root/ops/ops/$DATA{'n'}.db",0777);
 
 $ops_acc = $DATA{'n'};
 
@@ -60,9 +60,9 @@ exit;
 
 ####################################### KICK #################################################
 
-if(-e "$root/online/kicked/$DATA{'n'}"){
+if(-e "$root/online/kicked/$DATA{'n'}.db"){
 
-dbmopen(%KICK,"$root/online/kicked/$DATA{'n'}",0777);
+dbmopen(%KICK,"$root/online/kicked/$DATA{'n'}.db",0777);
 
 $ff = $time - $KICK{'time'};
 
@@ -84,9 +84,9 @@ exit;
 
 
 
-if(-e "$root/online/banned/$DATA{'n'}"){
+if(-e "$root/online/banned/$DATA{'n'}.db"){
 
-dbmopen(%BANNED,"$root/online/banned/$DATA{'n'}",0777);
+dbmopen(%BANNED,"$root/online/banned/$DATA{'n'}.db",0777);
 
 $f = $time - $BANNED{'bantime'};
 
@@ -109,9 +109,9 @@ exit;
 ## Suspended
 
 
-if(-e "$root/suspend/$DATA{'n'}"){
+if(-e "$root/suspend/$DATA{'n'}.db"){
 
-dbmopen(%BANNED,"$root/suspend/$DATA{'n'}",0777);
+dbmopen(%BANNED,"$root/suspend/$DATA{'n'}.db",0777);
 
 $loginerror = " $BANNED{'out'}<center><font color=red>Please contact $title for more information.</font></center>";
 
@@ -128,7 +128,7 @@ exit;
 
 ### expired?
 
-dbmopen(%A,"$root/ops/ops/$DATA{'n'}",0777);
+dbmopen(%A,"$root/ops/ops/$DATA{'n'}.db",0777);
 
 ($xday,$xmonth,$xyear) = split(/\//,$A{'ops_end'});
 
@@ -192,7 +192,7 @@ $crap = "$Cookies{'ulyaoth'}";
 
 }else{
 
-if(-e "$root/ops/ops/$DATA{'n'}"){
+if(-e "$root/ops/ops/$DATA{'n'}.db"){
 
 $used_nicks = "$Cookies{'ulyaoth'}\!\#$DATA{'n'}\#";
 
@@ -239,7 +239,7 @@ $a_nick = $DATA{'n'};
 
 $DATA{'n'} = @last[0];
 
-unlink ("$root/online/users/$lastnick");
+unlink ("$root/online/users/$lastnick.db");
 
 unlink ("$root/online/lastnick/$DATA{'n'}.txt");
 
@@ -273,11 +273,11 @@ $DATA{'room'} = $firstroom;
 
 if($a_nick){
 
-dbmopen(%PREF,"$root/opspreferences/$a_nick",0777);
+dbmopen(%PREF,"$root/opspreferences/$a_nick.db",0777);
 
 }else{
 
-dbmopen(%PREF,"$root/opspreferences/$DATA{'n'}",0777);
+dbmopen(%PREF,"$root/opspreferences/$DATA{'n'}.db",0777);
 
 }
 
@@ -570,7 +570,7 @@ if(-e "$root/online/users/$i"){
 
 open(P,">>$root/online/pm/$zz.txt");
 
-dbmopen(%PR,"$root/online/users/$i",0777);
+dbmopen(%PR,"$root/online/users/$i.db",0777);
 
 print P "<!-- $time --> *** User <A HREF=\"javascript:m('$i')\"><B>\*$i\*</b></a> <font size=\"1\" color=\"\#FFFFFF\">i</font>  ($PR{'ip'}) is online.<br>\n";
 
@@ -645,7 +645,7 @@ close(L);
 
 
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 undef $USER{'id'};
 

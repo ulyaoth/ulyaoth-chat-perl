@@ -164,7 +164,7 @@ print "</table>\n</center>\n";
 print "<a name=\"b\"></a>\n<hr>\n";
 
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 print $USER{'ann_mess'};
 

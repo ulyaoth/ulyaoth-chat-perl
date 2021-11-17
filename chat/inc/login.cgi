@@ -64,7 +64,7 @@ exit;
 
 
 
-if(-e "$root/online/users/$DATA{'n'}" && !-e "$root/ops/ops/$DATA{'n'}"){
+if(-e "$root/online/users/$DATA{'n'}.db" && !-e "$root/ops/ops/$DATA{'n'}.db"){
 
 print "Content-type: text/html\n\n";
 
@@ -77,11 +77,11 @@ exit;
 }
 
 
-if(!-e "$root/ops/ops/$DATA{'n'}"){
+if(!-e "$root/ops/ops/$DATA{'n'}.db"){
 
 require "$root/inc/loginuser.inc";
 
-}elsif(-e "$root/ops/ops/$DATA{'n'}"){
+}elsif(-e "$root/ops/ops/$DATA{'n'}.db"){
 
 require "$root/inc/loginops.inc";
 

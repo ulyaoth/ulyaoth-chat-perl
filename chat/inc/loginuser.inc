@@ -52,7 +52,7 @@ $kkicked = "$kicked_usr_agent$ffull_ip";
 
 if(-e "$root/online/kicked/$kkicked"){
 
-dbmopen(%KICK,"$root/online/kicked/$kkicked",0777);
+dbmopen(%KICK,"$root/online/kicked/$kkicked.db",0777);
 
 $ff = $time - $KICK{'time'};
 
@@ -162,7 +162,7 @@ $crap = "$Cookies{'ulyaoth'}";
 
 }else{
 
-if(-e "$root/ops/ops/$DATA{'n'}"){
+if(-e "$root/ops/ops/$DATA{'n'}.db"){
 
 $used_nicks = "$Cookies{'ulyaoth'}\!\#$DATA{'n'}\#";
 
@@ -224,9 +224,9 @@ exit;
 ################## CHECK BAN ########################################
 
 
-if(-e "$root/online/banned/$ip"){
+if(-e "$root/online/banned/$ip.db"){
 
-dbmopen(%BANNED,"$root/online/banned/$ip",0777);
+dbmopen(%BANNED,"$root/online/banned/$ip.db",0777);
 
 $f = $time - $BANNED{'bantime'};
 
@@ -297,9 +297,9 @@ exit;
 undef $onlinet;
 ############### CHECK COOKIE/BAN #####################################
 
-if(-e "$root/online/banned/$tip"){
+if(-e "$root/online/banned/$tip.db"){
 
-dbmopen(%BANNED,"$root/online/banned/$tip",0777);
+dbmopen(%BANNED,"$root/online/banned/$tip.db",0777);
 
 $f = $time - $BANNED{'bantime'};
 
@@ -475,7 +475,7 @@ close(PA);
 
 
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $USER{'id'} = $id; 
 

@@ -2,7 +2,7 @@
 
 unlink ("$root/online/pm/$kill_user.txt");
 
-dbmopen(%KILL,"$root/online/users/$kill_user",0777);
+dbmopen(%KILL,"$root/online/users/$kill_user.db",0777);
 
 if($KILL{'level'} >= 1){
 
@@ -34,7 +34,7 @@ close(TIM);
 
 dbmclose(%KILL);
 
-unlink ("$root/online/users/$kill_user");
+unlink ("$root/online/users/$kill_user.db");
 
 return true;
 

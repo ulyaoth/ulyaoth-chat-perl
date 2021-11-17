@@ -8,7 +8,7 @@ $root = '/opt/ulyaoth/chat';
 
 $sendmail = "/usr/lib/sendmail";
 
-$title = "Ulyaoth Chat;
+$title = "Ulyaoth Chat";
 
 &data();
 

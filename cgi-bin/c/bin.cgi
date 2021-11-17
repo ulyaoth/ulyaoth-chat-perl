@@ -4,7 +4,7 @@ use CGI;
 use Fcntl;
 use DB_File;
 
-$root = '/srv/ulyaoth/chat';
+$root = '/opt/ulyaoth/chat';
 
 
 &data();
@@ -87,7 +87,7 @@ exit;
 } 
 
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $id = $USER{'id'};
 
@@ -501,7 +501,7 @@ exit;
 
 if($fr eq "yes"){
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 undef $USER{'fr'};
 

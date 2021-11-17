@@ -6,7 +6,7 @@ print "Content-type: text/html\n\n";
 
 print "<pre>\n\n";
 
-opendir(USERDIR,"/srv/ulyaoth/chat/online/users/");
+opendir(USERDIR,"/opt/ulyaoth/chat/online/users/");
 
 $c = 0;
 
@@ -14,7 +14,7 @@ foreach $user (sort(grep !/^\./, readdir USERDIR)) {
 
 $user =~ s/.db//;
 
-dbmopen(%USER,"/srv/ulyaoth/chat/online/users/$user",0777);
+dbmopen(%USER,"/opt/ulyaoth/chat/online/users/$user",0777);
 
 $nik = $USER{'nick'};
 

@@ -10,9 +10,9 @@ $sendmail = "/usr/lib/sendmail";
 
 $title = "Ulyaoth Chat";
 
-$root = '/srv/ulyaoth/chat/signup';
+$root = '/opt/ulyaoth/chat/signup';
 
-$root2 = '/srv/ulyaoth/chat';
+$root2 = '/opt/ulyaoth/chat';
 
 
 

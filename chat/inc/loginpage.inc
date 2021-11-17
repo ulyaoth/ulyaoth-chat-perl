@@ -9,7 +9,7 @@ require "/opt/ulyaoth/chat/cookies/cookie.lib";
 &GetCookies('realip');
 
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 if($Cookies{'realip'}){
 

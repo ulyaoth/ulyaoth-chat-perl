@@ -11,7 +11,7 @@ $title = "Ulyaoth Chat";
 
 $sendmail = "/usr/lib/sendmail";
 
-$root = '/srv/ulyaoth/chat';
+$root = '/opt/ulyaoth/chat';
 
 
 &data();
