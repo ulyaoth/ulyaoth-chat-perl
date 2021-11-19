@@ -8,7 +8,7 @@ $loc = "ops.cgi";
 
 $sendmail = "/usr/lib/sendmail";
 
-$title = "Ulyaoth Chat";
+$title = "ulyaoth.com";
 
 $root = '/opt/ulyaoth/chat/signup';
 
@@ -216,7 +216,7 @@ print LASTNICK "yes\|\"\'\|$z";
 close(LASTNICK);
 
 
-dbmopen(%O,"/srv/ulyaoth/chat/app/$ref",0777);
+dbmopen(%O,"/opt/ulyaoth/chat/app/$ref.db",0777);
 
 $O{'application'} = $DATA{'opsnickname'};
 
