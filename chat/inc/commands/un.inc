@@ -162,11 +162,3 @@ return $bypass;
 
 
 exit;
-
-
-
-
-
-
-
-        

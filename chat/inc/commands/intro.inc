@@ -8,7 +8,7 @@ $in =~ s/^\/intro//;
 
 $in =~ s/^\s+//;
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $d = $USER{'intro_msg'};
 
@@ -33,7 +33,7 @@ exit;
 
 if(@intro[2]){
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $USER{'intro_msg'} = $in;
 
@@ -50,7 +50,7 @@ exit;
 
 if(@intro[1] eq '-'){
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 undef $USER{'intro_msg'};
 
@@ -65,7 +65,7 @@ exit;
 }
 
 
-if(!-e "$root/online/users/@intro[1]"){
+if(!-e "$root/online/users/@intro[1].db"){
 
 $errors = " Error, user <b>@intro[1]</b> not found. Intro action aborted.";
 
@@ -76,7 +76,7 @@ exit;
 }
 
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $int = $USER{'intro_msg'};
 
@@ -96,25 +96,3 @@ $errors = " Intro has been sent. --> <b>\*@intro[1]\*</b><font size=\"1\" color=
 return $errors;
 
 exit;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

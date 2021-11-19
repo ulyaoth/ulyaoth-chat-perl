@@ -49,6 +49,3 @@ $errors = " Message posted.";
 return $errors;
 
 exit;
-
-
-        

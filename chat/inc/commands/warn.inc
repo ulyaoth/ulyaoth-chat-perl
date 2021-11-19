@@ -82,7 +82,7 @@ exit;
 
 
 
-if(!-e "$root/online/users/@warn[1]") {
+if(!-e "$root/online/users/@warn[1].db") {
 
 
 $errors = " Error, user <b>@warn[1]</b> not found.";
@@ -95,7 +95,7 @@ exit;
 
 
 
-dbmopen(%KICK,"$root/online/users/@warn[1]",0777);
+dbmopen(%KICK,"$root/online/users/@warn[1].db",0777);
 
 
 $kick_level = $KICK{'level'};
@@ -188,4 +188,3 @@ $errors = " Kick warning sent to user <b>@warn[1]</b>.";
 return $errors;
 
 exit;
-

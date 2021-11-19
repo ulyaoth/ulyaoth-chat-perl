@@ -67,7 +67,7 @@ $fon = "Terminal";
 
 if(!$fon){
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 undef $USER{'nfont'};
 
@@ -81,7 +81,7 @@ exit;
 
 }
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 
 $USER{'nfont'} = $fon;
@@ -93,4 +93,3 @@ $errors = " Font nickname type set to <font face=\"$fon\"><b>$fon</b></font>.";
 return $errors;
 
 exit;
-

@@ -135,7 +135,7 @@ exit;
 }
 
 
-#if(-e "$root/online/users/$newnick"){
+#if(-e "$root/online/users/$newnick.db"){
 
 # $errors = " Sorry, nickname <b>$newnick</b> already in use."; 
 
@@ -157,7 +157,7 @@ closedir(RD);
                 $entry =~ s/.db//;
 
                
-if($newnick =~ /^$entry$/i && !-e "$root/ops/ops/$newnick") {
+if($newnick =~ /^$entry$/i && !-e "$root/ops/ops/$newnick.db") {
 
 $errors = " Sorry, nickname <b>$newnick</b> already in use."; 
 
@@ -180,7 +180,7 @@ $errors = " Sorry, nickname <b>$newnick</b> already in use.";
 
 
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 
 
@@ -243,7 +243,7 @@ close(NICKROOM);
 
 
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 
 
@@ -271,7 +271,7 @@ rename("$root/online/pm/$DATA{'n'}.txt","$root/online/pm/$newnick.txt");
 
 
 
-rename("$root/online/users/$DATA{'n'}","$root/online/users/$newnick");
+rename("$root/online/users/$DATA{'n'}.db","$root/online/users/$newnick.db");
 
 
 
@@ -281,7 +281,7 @@ $DATA{'n'} = $newnick;
 
 
 
-dbmopen(%USERR,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USERR,"$root/online/users/$DATA{'n'}.db",0777);
 
 
 
@@ -338,38 +338,3 @@ $bypass = 1;
 return $bypass;
 
 return $mkframe;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

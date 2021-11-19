@@ -58,7 +58,7 @@ close(DEL2);
 ############################## PRINT CMAIL AGAIN ########################################################
 
 
-dbmopen(%MAIL,"$root/opspreferences/$realnick",0777);
+dbmopen(%MAIL,"$root/opspreferences/$realnick.db",0777);
 
 $MAIL{'mail_inbox'} = $MAIL{'mail_inbox'} - 1;
 
@@ -99,4 +99,3 @@ require "$root/inc/print_footer.inc";
 
 
 exit;
-

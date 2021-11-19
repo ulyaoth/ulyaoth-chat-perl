@@ -67,7 +67,7 @@ $fon = "Terminal";
 
 if(!$fon){
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 if($USER{'xcolor'}){
 
@@ -95,7 +95,7 @@ exit;
 
 }
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $USER{'ecolor'} = "</font>";
 
@@ -120,4 +120,3 @@ $errors = " Font type set to <font face=\"$fon\"><b>$fon</b></font>.";
 return $errors;
 
 exit;
-

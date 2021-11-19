@@ -128,6 +128,3 @@ require "$root/inc/check_pm.inc";
 require "$root/inc/print_footer.inc";
 
 exit 0;
-
-
-

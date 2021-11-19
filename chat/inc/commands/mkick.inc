@@ -62,7 +62,7 @@ exit;
 
 
 
-if(!-e "$root/online/users/@mkick[1]") {
+if(!-e "$root/online/users/@mkick[1].db") {
 
 $errors = " Error, user <b>@mkick[1]</b> not found.";
         
@@ -76,7 +76,7 @@ exit;
 
 
 
-dbmopen(%KICK,"$root/online/users/@mkick[1]",0777);
+dbmopen(%KICK,"$root/online/users/@mkick[1].db",0777);
 
 $kick_level = $KICK{'level'};
 
@@ -159,7 +159,7 @@ next;
 
 }
 
-dbmopen(%KICKED,"$root/online/kicked/$kick_it",0777);
+dbmopen(%KICKED,"$root/online/kicked/$kick_it.db",0777);
 
 $KICKED{'kick'} = "*** KICK User <b>@mkick[1]</b><font size=\"1\" color=\"$iback\">i</font> ($renick) by <b>$DATA{'n'}</b> ($realnick) for reason ($kickreason).";
 

@@ -2,9 +2,9 @@
 
 if($level >= 1){
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
-dbmopen(%PREF,"$root/opspreferences/$realnick",0777);
+dbmopen(%PREF,"$root/opspreferences/$realnick.db",0777);
 
 $PREF{'wid'} = $USER{'wid'};
 
@@ -64,25 +64,3 @@ exit;
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

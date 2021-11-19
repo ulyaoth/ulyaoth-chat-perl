@@ -8,7 +8,7 @@ if($level >= 1){
 
 if(@pic[1] eq ""){
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 undef $USER{'nickname'};
 
@@ -36,7 +36,7 @@ if(@pic[1]!~/http:\/\//){
 
   }
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $USER{'nickname'} = "<a href=\"@pic[1]\" target=\"_blank\">";
 
@@ -59,25 +59,3 @@ exit;
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

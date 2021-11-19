@@ -208,7 +208,7 @@ exit;
 
 
 
-if(!-e "$root/ops/ops/@igmail[1]"){
+if(!-e "$root/ops/ops/@igmail[1].db"){
 
 
 
@@ -299,8 +299,3 @@ return $errors;
 
 
 exit;
-
-
-
-
-

@@ -16,7 +16,7 @@ exit;
 
 
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $USER{'wid'} = @wid[1];
 
@@ -31,26 +31,3 @@ return $wid;
 return $bypass;
 
 exit;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -178,9 +178,3 @@ return $bypass;
 
 
 exit;
-
-
-
-
-
-        

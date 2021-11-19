@@ -24,9 +24,9 @@ if ($s ne "." && $s ne "..") {
 
 $x++; 
 
-unlink ("$root/online/rooms/$s");
+unlink ("$root/online/rooms/$s.txt");
 
-open (r, ">>$root/online/rooms/$s");
+open (r, ">>$root/online/rooms/$s.txt");
 
 print r "<b>*** rooms cleared by operator <b>$DATA{'n'}</b>. $fulltime </b><br>\n<br>\n<br>\n<br>\n<br>\n<br>\n";
 
@@ -47,10 +47,3 @@ return $errors;
 
 
 exit;
-
-
-
-
-
-
-

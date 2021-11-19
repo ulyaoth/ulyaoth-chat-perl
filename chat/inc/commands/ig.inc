@@ -5,7 +5,7 @@
             
 if(!@ignore[1]){
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 if($USER{'ignore_all'}){
 
@@ -56,7 +56,7 @@ exit;
 ##########################################################################################
 
 
-if(!-e "$root/online/users/@ignore[1]" && @ignore[1] ne '-'){
+if(!-e "$root/online/users/@ignore[1].db" && @ignore[1] ne '-'){
 
 
 $errors = " Error, ignore failed , user <b>@ignore[1]</b> not found.";
@@ -167,6 +167,3 @@ $errors = " User <b>@ignore[1]</b> added to ignore list.";
 return $errors;
 
 exit;
-
-
-

@@ -30,7 +30,7 @@ if($i ne '.' && $i ne '..'){
 
 $w++;
 
-unlink ("$root/vote/$i");
+unlink ("$root/vote/$i.dat");
 
 	}
 }
@@ -67,7 +67,7 @@ exit;
 }
 
 
-if(!-e "$root/ops/ops/@b[2]"){
+if(!-e "$root/ops/ops/@b[2].db"){
 
 $errors = " Error, can not find operator <b>@b[2]</b> in database. Winner must be an operator.";
         
@@ -112,19 +112,3 @@ return $errors;
 exit;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

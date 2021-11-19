@@ -60,7 +60,7 @@ exit;
 }
 
 
-if(!-e "$root/online/users/@abuse[1]"){
+if(!-e "$root/online/users/@abuse[1].db"){
      close(NOTANOP);
      
 $errors = " Error, user <b>@abuse[1]</b> not found.";
@@ -73,7 +73,7 @@ exit;
 
 
 
-dbmopen(%USER,"$root/online/users/@abuse[1]",0777);
+dbmopen(%USER,"$root/online/users/@abuse[1].db",0777);
 
 $grantedid = $USER{'id'};
 
@@ -115,7 +115,4 @@ $errors = " User <b>$abuse[1]</b> successfuly granted.";
 
 return $errors;
 
-exit;
-
-
-        
+exit;   

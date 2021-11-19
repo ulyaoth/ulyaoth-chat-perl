@@ -18,7 +18,7 @@ print OLDROOM "<!--servermsg--> *** <B>$DATA{'n'}</B> has been magically summone
 
 close(OLDROOM);
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $USER{'room'} = $summonroom;
 
@@ -53,9 +53,3 @@ return $mkframe;
 return $room;
 
 return true;
-
-
-
-
-
-

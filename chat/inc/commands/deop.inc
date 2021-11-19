@@ -39,7 +39,7 @@ exit;
 
 }
 
-if(!-e "$root/ops/ops/@deop[1]"){
+if(!-e "$root/ops/ops/@deop[1].db"){
 
 
 $errors = " Error, user <b>@deop[1]</b> is not an Operator.";
@@ -62,7 +62,7 @@ exit;
 
 }
 
-if(-e "$root/deop/@deop[1]"){
+if(-e "$root/deop/@deop[1].db"){
 
 
 $errors = " Error, Operator <b>@deop[1]</b> is already deopped.";
@@ -74,7 +74,7 @@ exit;
 }
 
 
-dbmopen(%DEOP,"$root/ops/ops/@deop[1]",0777);
+dbmopen(%DEOP,"$root/ops/ops/@deop[1].db",0777);
 
 $dlevel = $DEOP{'level'};
 
@@ -91,7 +91,7 @@ exit;
 }
 
 
-dbmopen(%D,"$root/deopped/@deop[1]",0777);
+dbmopen(%D,"$root/deopped/@deop[1].db",0777);
 
 
 $D{'owner'} = $realnick;
@@ -102,7 +102,7 @@ $D{'deop'} = "*** Operator <b>@deop[1]</b> deopped by <b>$realnick</b> for ($rea
 
 dbmclose(%D);
 
-dbmopen(%R,"$root/ops/ops/@deop[1]",0777);
+dbmopen(%R,"$root/ops/ops/@deop[1].db",0777);
 
 $R{'record_deops'}++;
 
@@ -117,16 +117,3 @@ $errors = " Operator <b>@deop[1]</b> deopped. Please clear your deop reason by p
 return $errors;
 
 exit;
-
-
-
-
-
-
-
-
-
-
-
-
-

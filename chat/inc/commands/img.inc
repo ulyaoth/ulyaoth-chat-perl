@@ -42,7 +42,7 @@ exit;
 }
 
 
-if(!-e "$root/online/users/@link[1]"){
+if(!-e "$root/online/users/@link[1].db"){
 
 $errors = " Error, user <b>@link[1]</b> not found.";
 
@@ -83,4 +83,3 @@ $errors = " Link Sent -> <b>@link[1]</b> <a href=\"@link[2]\" target=_blank>@lin
 return $errors;
 
 exit;
-

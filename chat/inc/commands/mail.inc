@@ -138,7 +138,7 @@ exit;
 
 
 
-dbmopen(%MAIL,"$root/opspreferences/$realnick",0777);
+dbmopen(%MAIL,"$root/opspreferences/$realnick.db",0777);
 
 
 
@@ -230,7 +230,7 @@ exit;
 
 
 
-if(!-e "$root/ops/ops/@mail[1]"){
+if(!-e "$root/ops/ops/@mail[1].db"){
 
 
 
@@ -292,7 +292,7 @@ exit;
 
 
 
-dbmopen(%MAIL,"$root/opspreferences/@mail[1]",0777);
+dbmopen(%MAIL,"$root/opspreferences/@mail[1].db",0777);
 
 
 
@@ -345,10 +345,3 @@ return $errors;
 
 
 exit;
-
-
-
-
-
-
-

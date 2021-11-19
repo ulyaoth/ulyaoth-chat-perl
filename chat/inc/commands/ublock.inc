@@ -35,7 +35,7 @@ if($i ne '.' && $i ne '..'){
 
 $b++;
 
-unlink ("$root/online/banned/$i");
+unlink ("$root/online/banned/$i.db");
 
 	}
 }
@@ -52,7 +52,7 @@ if($i ne '.' && $i ne '..'){
 
 $k++;
 
-unlink ("$root/online/kicked/$i");
+unlink ("$root/online/kicked/$i.db");
 
 	}
 }
@@ -74,18 +74,3 @@ return $errors;
 
 
 exit;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

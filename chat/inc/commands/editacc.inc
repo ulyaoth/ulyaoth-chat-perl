@@ -28,7 +28,7 @@ exit;
 
 
 
-dbmopen(%S,"$root/ops/ops/$DATA{'opsnick'}",0777);
+dbmopen(%S,"$root/ops/ops/$DATA{'opsnick'}.db",0777);
 
 
 $S{'level'} = $DATA{'opslevel'};
@@ -61,5 +61,3 @@ $errors = " Details for Ops account <b>$DATA{'opsnick'}</b> successfuly updated.
 return $errors;
 
 exit;
-
-

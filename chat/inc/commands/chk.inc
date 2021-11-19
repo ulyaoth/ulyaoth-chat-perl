@@ -30,7 +30,7 @@ if($i ne '.' && $i ne '..'){
 
 $w++;
 
-unlink ("$root/time/$i");
+unlink ("$root/time/$i.dat");
 
 	}
 }
@@ -60,7 +60,7 @@ exit;
 }
 
 
-if(!-e "$root/ops/ops/@b[1]"){
+if(!-e "$root/ops/ops/@b[1].db"){
 
 $errors = " Error, operator <b>@b[1]</b> not found.";
         
@@ -79,9 +79,9 @@ $n = <M>;
 
 close(M);
 
-if(-e "$root/online/users/@b[1]"){
+if(-e "$root/online/users/@b[1].db"){
 
-dbmopen(%D,"$root/online/users/@b[1]",0777);
+dbmopen(%D,"$root/online/users/@b[1].db",0777);
 
 $e = $time - $D{'online'};
 
@@ -128,18 +128,3 @@ sub hms {
     return sprintf "%02d:%02d:%02d", $hours,$minutes,$seconds;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -32,7 +32,7 @@ exit;
 if(@mute[1] eq '-'){
 
 
-if(!-e "$root/online/users/@mute[2]"){
+if(!-e "$root/online/users/@mute[2].db"){
 
 $errors = " Error, user <b>@mute[2]</b> not found.";
 
@@ -43,7 +43,7 @@ exit;
 }
 
 
-dbmopen(%USER,"$root/online/users/@mute[2]",0777);
+dbmopen(%USER,"$root/online/users/@mute[2].db",0777);
 
 if($USER{'level'} >= 1 && $level < $comm_rank){
 
@@ -80,7 +80,7 @@ dbmclose(%USER);
 }
 
 
-if(!-e "$root/online/users/@mute[1]"){
+if(!-e "$root/online/users/@mute[1].db"){
 
 $errors = " Error, user <b>@mute[2]</b> not found.";
 
@@ -91,7 +91,7 @@ exit;
 }
 
 
-dbmopen(%USER,"$root/online/users/@mute[1]",0777);
+dbmopen(%USER,"$root/online/users/@mute[1].db",0777);
 
 if($USER{'level'} >= 1 && $level < $comm_rank){
 
@@ -121,18 +121,3 @@ dbmclose(%USER);
 return $errors;
 
 exit;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -98,7 +98,7 @@ print "<FORM METHOD=\"POST\" name=\"msg\" ACTION=\"$location#b\">\n";
 
 
 
-print "<b>· $title ($room) 2000 - 2010 © All rights reserved. Please come back soon!!! · </b><hr>\n";
+print "<b>· $title ($room) 2000 - 2022 © All rights reserved. Please come back soon!!! · </b><hr>\n";
 
 
 
@@ -188,4 +188,3 @@ undef $kill_user;
 
 
 exit;
-

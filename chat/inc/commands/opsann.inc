@@ -45,7 +45,3 @@ $errors = " Time: $fulltime. Private login announcement for operators posted: $D
 return $errors;
 
 exit;
-
-
-
-        

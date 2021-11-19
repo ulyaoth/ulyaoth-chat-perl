@@ -202,15 +202,3 @@ return $bypass;
 
 
 exit;
-
-
-
-
-
-
-
-
-
-
-
-        

@@ -6,7 +6,7 @@
 
 if(@ips[1] == 1){
 
-dbmopen(%IP,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%IP,"$root/online/users/$DATA{'n'}.db",0777);
 
 $IP{'ips_control'} = "one";
 
@@ -23,7 +23,7 @@ exit;
 
 if(@ips[1] == 2){
 
-dbmopen(%IP,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%IP,"$root/online/users/$DATA{'n'}.db",0777);
 
 $IP{'ips_control'} = "two";
 
@@ -39,7 +39,7 @@ exit;
 
 if(@ips[1] == 3){
 
-dbmopen(%IP,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%IP,"$root/online/users/$DATA{'n'}.db",0777);
 
 $IP{'ips_control'} = "three";
 
@@ -55,7 +55,7 @@ exit;
 
 if(@ips[1] == 4){
 
-dbmopen(%IP,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%IP,"$root/online/users/$DATA{'n'}.db",0777);
 
 $IP{'ips_control'} = "four";
 
@@ -74,7 +74,7 @@ exit;
 
 if(@ips[1] == 0){
 
-dbmopen(%IP,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%IP,"$root/online/users/$DATA{'n'}.db",0777);
 
 $IP{'ips_control'} = 0;
 
@@ -94,7 +94,3 @@ $errors = " Syntax: /ips [1-4].";
 return $errors;
 
 exit;
-
-
-
-        

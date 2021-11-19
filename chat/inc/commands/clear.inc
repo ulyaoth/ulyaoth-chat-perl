@@ -14,7 +14,7 @@ if ($command eq '/clear' && $level >= 12 && @messsage[1] ne '-' && $deopped ne 1
 @clear[1]=substr(@clear[1],0,13);
 
 
-if(length(@clear[1]) < 3 && !-e "$root/online/users/@clear[1]"){
+if(length(@clear[1]) < 3 && !-e "$root/online/users/@clear[1].db"){
 
 
 $errors = " Syntax: /clear [text].";

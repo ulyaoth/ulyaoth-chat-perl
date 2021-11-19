@@ -55,6 +55,3 @@ $errors = " <b>Flooding committee bulletin board will result in permanent accoun
 return $errors;
 
 exit;
-
-
-        

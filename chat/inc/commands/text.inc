@@ -7,7 +7,7 @@
 
 if(@crayon[1] eq ""){
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $USER{'bgcolor'} = "";
 
@@ -33,7 +33,7 @@ return $text;
 
 @crayon[1]=substr(@crayon[1],0,15);
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $USER{'text'} = "text=\"@crayon[1]\"";
 
@@ -48,5 +48,3 @@ return $text;
 return $errors;
 
 }
-
-

@@ -127,6 +127,3 @@ $errors = " User <b>@wait[1]</b> added to wait list.<br>Current Wait List: @wa";
 return $errors;
 
 exit;
-
-
-

@@ -162,7 +162,7 @@ print "TOTAL: <b>$c</b> ban(s).<br>\n";
 
 
 
-if(!-e "$root/online/banned/@unban[1]"){
+if(!-e "$root/online/banned/@unban[1].db"){
 
 
 
@@ -188,7 +188,7 @@ exit;
 
 
 
-dbmopen(%BANNED,"$root/online/banned/@unban[1]",0777);
+dbmopen(%BANNED,"$root/online/banned/@unban[1].db",0777);
 
 
 
@@ -236,7 +236,7 @@ close(UNBANROOM);
 
 
 
-unlink("$root/online/banned/@unban[1]");
+unlink("$root/online/banned/@unban[1].db");
 
 
 
@@ -265,12 +265,3 @@ return $errors;
 
 
 exit;
-
-
-
-
-
-
-
-
-

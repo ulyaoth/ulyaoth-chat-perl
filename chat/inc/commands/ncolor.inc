@@ -7,7 +7,7 @@
 
 if(@crayon[1] eq ""){
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $USER{'nickcolor'} = "";
 
@@ -22,7 +22,7 @@ return $errors;
 
 @crayon[1]=substr(@crayon[1],0,15);
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $USER{'nickcolor'} = @crayon[1];
 
@@ -34,5 +34,3 @@ $errors = " Nickname font color set to <font color=\"@crayon[1]\">@crayon[1]</fo
 return $errors;
 
 }
-
-

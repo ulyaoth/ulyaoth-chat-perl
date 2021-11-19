@@ -91,7 +91,7 @@ sub send_mail{
 
 my($mailops) = @_;
 
-dbmopen(%MAIL,"$root/opspreferences/$mailops",0777);
+dbmopen(%MAIL,"$root/opspreferences/$mailops.db",0777);
 
 
 
@@ -142,10 +142,3 @@ return $errors;
 
 
 exit;
-
-
-
-
-
-
-

@@ -23,7 +23,7 @@ closedir(A);
 
 foreach $b(@e){
 
-unlink("$root/online/$i/$b");
+unlink("$root/online/$i/$b.db");
 
 
 }
@@ -55,9 +55,3 @@ exit;
 
 
 }
-
-
-
-
-
-

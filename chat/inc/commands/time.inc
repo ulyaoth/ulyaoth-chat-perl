@@ -15,7 +15,7 @@ foreach $f (@dir) {
 
 if($f ne '..' && $f ne '.'){
 
-open(DAT,"$root/time/$f");
+open(DAT,"$root/time/$f.dat");
 
 flock(DAT,1);
 
@@ -129,5 +129,3 @@ sub hms {
 
 
 exit;
-
-

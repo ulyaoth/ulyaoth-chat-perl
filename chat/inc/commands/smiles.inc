@@ -73,7 +73,7 @@ exit;
 }
 
 
-if(!-e "$root/online/users/@action[1]"){
+if(!-e "$root/online/users/@action[1].db"){
 
 $errors = " Error, user <b>@action[1]</b> not found.";
 
@@ -128,7 +128,3 @@ $bypass = 1;
 return $bypass;
 
 exit;
-
-
-
-        

@@ -200,8 +200,3 @@ $errors= " Error, command $command not recognized, please use /help for a list o
 return $errors;
 
 }
-
-
-
-
-

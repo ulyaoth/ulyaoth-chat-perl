@@ -15,7 +15,7 @@ exit;
 }
 
 
-if(!-e "$root/online/users/@send[1]"){
+if(!-e "$root/online/users/@send[1].db"){
 
 $errors = " Error, user <b>@send[1]</b> not found.";
 
@@ -59,5 +59,3 @@ print <<"(END HTML FOOTER)";
 (END HTML FOOTER)
 
 exit;
-
-

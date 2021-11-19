@@ -24,7 +24,7 @@ exit;
 }
 
 
-if(!-e "$root/online/users/@sban[1]"){
+if(!-e "$root/online/users/@sban[1].db"){
 
 $errors = " Error, user <b>@sban[1]</b> not found.";
 
@@ -35,7 +35,7 @@ exit;
 }
 
 
-dbmopen(%USER,"$root/online/users/@sban[1]",0777);
+dbmopen(%USER,"$root/online/users/@sban[1].db",0777);
 
 if($USER{'level'} >= 1){
 
@@ -65,22 +65,3 @@ return $errors;
 dbmclose(%USER);
 
 exit;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -22,7 +22,7 @@ exit;
 
 @restore = split(/\s+/, $DATA{'msg'});
 
-unlink("$root/deopped/@restore[1]");
+unlink("$root/deopped/@restore[1].db");
 
 
 $errors = " Ops <b>@restore[1]</b> re-opped.";
@@ -34,12 +34,3 @@ return $errors;
 
 
 exit;
-
-
-
-
-
-
-
-
-

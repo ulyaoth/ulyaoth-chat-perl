@@ -157,12 +157,4 @@ return $bypass;
 
 
 
-exit;
-
-
-
-
-
-
-
-        
+exit;   

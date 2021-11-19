@@ -87,16 +87,3 @@ print "TOTAL: <b>$c</b> operators in database.<br>\n";
 
 
      exit;
-
-
-
-
-
-
-
-
-
-
-
-
-

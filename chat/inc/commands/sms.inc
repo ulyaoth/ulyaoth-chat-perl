@@ -53,5 +53,3 @@ print "<INPUT TYPE=HIDDEN NAME=\"room\" VALUE=\"$DATA{'room'}\">\n</form>\n";
 print "</body>\n";
 
 exit;
-
-

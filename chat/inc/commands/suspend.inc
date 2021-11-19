@@ -39,7 +39,7 @@ exit;
 
 }
 
-if(!-e "$root/ops/ops/@suspend[1]"){
+if(!-e "$root/ops/ops/@suspend[1].db"){
 
 
 $errors = " Error, user <b>@suspend[1]</b> is not an Operator.";
@@ -62,7 +62,7 @@ exit;
 
 }
 
-if(-e "$root/suspend/@suspend[1]"){
+if(-e "$root/suspend/@suspend[1].db"){
 
 
 $errors = " Error, Operator <b>@suspend[1]</b> is already suspended.";
@@ -74,7 +74,7 @@ exit;
 }
 
 
-dbmopen(%SUS,"$root/ops/ops/@suspend[1]",0777);
+dbmopen(%SUS,"$root/ops/ops/@suspend[1].db",0777);
 
 $dlevel = $SUS{'level'};
 
@@ -91,7 +91,7 @@ exit;
 }
 
 
-dbmopen(%D,"$root/suspend/@suspend[1]",0777);
+dbmopen(%D,"$root/suspend/@suspend[1].db",0777);
 
 
 $D{'owner'} = $realnick;
@@ -105,7 +105,7 @@ $D{'out'} = "*** Operator <b>@suspend[1]</b> suspended for reason ($reason).";
 
 dbmclose(%D);
 
-dbmopen(%R,"$root/ops/ops/@suspend[1]",0777);
+dbmopen(%R,"$root/ops/ops/@suspend[1].db",0777);
 
 $R{'record_suspends'}++;
 
@@ -121,16 +121,3 @@ $errors = " Operator <b>@suspend[1]</b> suspended.";
 return $errors;
 
 exit;
-
-
-
-
-
-
-
-
-
-
-
-
-

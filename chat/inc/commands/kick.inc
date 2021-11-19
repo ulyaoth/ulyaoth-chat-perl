@@ -123,7 +123,7 @@ exit;
 
 
 
-if(!-e "$root/online/users/@kick[1]") {
+if(!-e "$root/online/users/@kick[1].db") {
 
 
 
@@ -145,7 +145,7 @@ exit;
 
 
 
-dbmopen(%KICK,"$root/online/users/@kick[1]",0777);
+dbmopen(%KICK,"$root/online/users/@kick[1].db",0777);
 
 
 
@@ -246,7 +246,7 @@ if($kick_level >= 1){
 
 
 
-dbmopen(%KICKED,"$root/online/kicked/$renick",0777);
+dbmopen(%KICKED,"$root/online/kicked/$renick.db",0777);
 
 
 $KICKED{'kick'} = "*** KICK User <b>@kick[1]</b><font size=\"1\" color=\"$iback\">i</font> ($renick) by <b>$DATA{'n'}</b><font size=\"1\" color=\"$iback\">i</font> ($realnick) for reason ($kickreason).";
@@ -257,14 +257,14 @@ $KICKED{'time'} = $time;
 
 dbmclose(%KICKED);
 
-dbmopen(%R,"$root/ops/ops/$renick",0777);
+dbmopen(%R,"$root/ops/ops/$renick.db",0777);
 
 $R{'record_kicks'}++;
 
 dbmclose(%R);
 
 
-dbmopen(%KICKEDD,"$root/online/kicked/$kick_it",0777);
+dbmopen(%KICKEDD,"$root/online/kicked/$kick_it.db",0777);
 
 $KICKEDD{'kick'} = "*** KICK User <b>@kick[1]</b><font size=\"1\" color=\"$iback\">i</font> ($renick) by <b>$DATA{'n'}</b><font size=\"1\" color=\"$iback\">i</font> ($realnick) for reason ($kickreason).";
 
@@ -277,7 +277,7 @@ dbmclose(%KICKEDD);
 
 
 
-dbmopen(%KICKED,"$root/online/kicked/$kick_it",0777);
+dbmopen(%KICKED,"$root/online/kicked/$kick_it.db",0777);
 
 
 
@@ -355,4 +355,3 @@ return $errors;
 
 
 exit;
-

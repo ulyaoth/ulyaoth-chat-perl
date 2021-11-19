@@ -15,7 +15,7 @@ exit;
 
 
 
-if(!-e "$root/ops/ops/@forward[1]"){
+if(!-e "$root/ops/ops/@forward[1].db"){
 
 
 $errors = " Error, <b>@forward[1]</b> is not an Operator.";
@@ -57,9 +57,3 @@ close(WW);
 
 
 $errors = " Messages forwarded to Operator <b>@forward[1]</b>.";
-
-
-
-
-
-

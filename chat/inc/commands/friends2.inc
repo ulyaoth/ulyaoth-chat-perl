@@ -73,7 +73,7 @@ $mature = "old";
 }
 
 
-dbmopen(%F,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%F,"$root/online/users/$DATA{'n'}.db",0777);
 
 $F{'friends_mature'} = $mature;
 
@@ -141,13 +141,3 @@ require "$root/inc/check_pm.inc";
 require "$root/inc/print_footer.inc";
 
 exit;
-
-
-
-
-
-
-
-
-
-

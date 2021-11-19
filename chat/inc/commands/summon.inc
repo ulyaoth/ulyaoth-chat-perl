@@ -40,7 +40,7 @@ exit;
 
 
 
-if(!-e "$root/online/users/@summon[1]"){  
+if(!-e "$root/online/users/@summon[1].db"){  
 
 
 
@@ -117,7 +117,7 @@ exit;
 
 
 
-dbmopen(%USER,"$root/online/users/@summon[1]",0777);
+dbmopen(%USER,"$root/online/users/@summon[1].db",0777);
 
 
 if($USER{'null'}){
@@ -235,10 +235,3 @@ return $errors;
 exit;        
 
 }
-
-
-
-
-
-
-

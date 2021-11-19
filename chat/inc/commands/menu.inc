@@ -5,7 +5,7 @@
 if($menu == 1){
 
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 undef $USER{'menu'};
 
@@ -22,7 +22,7 @@ return $menu;
 exit 0;
 }
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $USER{'menu'} = 1;
 
@@ -38,32 +38,3 @@ return $menu;
 return $errors;
 
 return true;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

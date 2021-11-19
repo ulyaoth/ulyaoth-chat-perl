@@ -60,7 +60,7 @@ foreach $i(@mesaction){
 
 
 
-open(MESPRIV,">>$root/online/pm/$i");
+open(MESPRIV,">>$root/online/pm/$i.txt");
 
 
 
@@ -126,7 +126,7 @@ foreach $i(@mesaction){
 
 
 
- open(MESPRIV,">>$root/online/pm/$i");
+ open(MESPRIV,">>$root/online/pm/$i.txt");
 
 
 

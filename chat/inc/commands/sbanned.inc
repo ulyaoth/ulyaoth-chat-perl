@@ -45,5 +45,3 @@ undef $kill_user;
 
 
 return true;
-
-

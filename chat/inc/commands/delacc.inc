@@ -26,7 +26,7 @@ exit;
 
 
 
-if (!-e "$root/ops/ops/$del[1]") {
+if (!-e "$root/ops/ops/$del[1].db") {
 
 $errors = " ops account $del[1] does not exist.";
 
@@ -36,8 +36,8 @@ exit;
 
 } else {
 
-unlink ("$root/ops/ops/$del[1]");
-unlink ("$root/opspreferences/$del[1]");
+unlink ("$root/ops/ops/$del[1].db");
+unlink ("$root/opspreferences/$del[1].db");
 unlink ("$root/wait/$del[1].txt");
 unlink ("$root/mail/$del[1].txt");
 unlink ("$root/mail/igmail/$del[1].txt");
@@ -50,8 +50,3 @@ return $errors;
 exit;
 
    }
-
-
-
-
-

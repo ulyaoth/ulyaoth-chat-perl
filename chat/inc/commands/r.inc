@@ -98,7 +98,3 @@ $bypass = 1;
 return $bypass;
 
 exit;
-
-
-
-        

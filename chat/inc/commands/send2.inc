@@ -16,7 +16,7 @@ exit;
 
 }
 
-if(!-e "$root/online/users/@send[1]" || !-e "$basedir/@send[2]") {
+if(!-e "$root/online/users/@send[1].db" || !-e "$basedir/@send[2]") {
 
 $errors = " Error, user <b>@send[1]</b> is not online or uploaded file doesn\'t exist.";
 
@@ -43,15 +43,3 @@ return $errors;
 
 
 exit;
-
-
-
-
-
-
-
-
-
-
-
-        

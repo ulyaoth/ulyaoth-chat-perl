@@ -17,7 +17,3 @@ require "$root/inc/print_footer.inc";
 unlink ("$root/online/pm/$DATA{'n'}.txt");
 
 exit;
-
-
-
-        

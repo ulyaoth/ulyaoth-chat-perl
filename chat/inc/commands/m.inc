@@ -78,7 +78,7 @@ exit;
 
 
 
-if(!-e "$root/online/users/@msg[1]"){
+if(!-e "$root/online/users/@msg[1].db"){
 
 
 
@@ -139,7 +139,7 @@ exit;
 
 
 
-dbmopen(%LAST,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%LAST,"$root/online/users/$DATA{'n'}.db",0777);
 
 
 
@@ -173,7 +173,7 @@ exit;
 
 
 
-dbmopen(%USER,"$root/online/users/@msg[1]",0777);
+dbmopen(%USER,"$root/online/users/@msg[1].db",0777);
 
 
 if($USER{'ignore_all'}){
@@ -252,7 +252,7 @@ $away = "Message sent, User <b>@msg[1]</b><font size=\"1\" color=\"$iback\">i</f
 
 
 
-dbmopen(%L,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%L,"$root/online/users/$DATA{'n'}.db",0777);
 
 $L{'lastpm'} = $DATA{'msg'};
 

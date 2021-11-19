@@ -28,7 +28,7 @@ if(length(@whois[1]) > 16){
 
 
 
-if(length(@whois[1]) < 2 && @whois[1] ne '#' && !-e "$root/online/users/@whois[1]"){
+if(length(@whois[1]) < 2 && @whois[1] ne '#' && !-e "$root/online/users/@whois[1].db"){
 
 
 
@@ -58,7 +58,7 @@ exit;
 
 
 
-}elsif(!-e "$root/online/users/@whois[1]"){
+}elsif(!-e "$root/online/users/@whois[1].db"){
 
 
 
@@ -77,7 +77,7 @@ exit;
 
 
 
-dbmopen(%USER,"$root/online/users/@whois[1]",0777);
+dbmopen(%USER,"$root/online/users/@whois[1].db",0777);
 
 
 
@@ -436,28 +436,3 @@ print "TOTAL: <b>$c</b><br>\n";
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -85,16 +85,3 @@ print "TOTAL: <b>$c</b>.<br>\n";
 
 
      exit;
-
-
-
-
-
-
-
-
-
-
-
-
-

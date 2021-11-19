@@ -30,7 +30,7 @@ return $errors;
 
 
 
-if(!-e "$root/online/users/@id[1]"){
+if(!-e "$root/online/users/@id[1].db"){
 
 
 
@@ -48,7 +48,7 @@ return $errors;
 
 
 
-dbmopen(%ID,"$root/online/users/@id[1]",0777);
+dbmopen(%ID,"$root/online/users/@id[1].db",0777);
 
 
 
@@ -230,7 +230,7 @@ if(@id[1] eq $DATA{'n'}){
 
 
 
-dbmopen(%ID,"$root/online/users/@id[1]",0777);
+dbmopen(%ID,"$root/online/users/@id[1].db",0777);
 
 
 
@@ -313,5 +313,3 @@ if ($command eq '/id' && $level < 1){
 
 
         }
-
-        

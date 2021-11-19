@@ -38,7 +38,7 @@ return $errors;
 
 }
 
-if(!-e "$root/ops/ops/@lev[1]"){
+if(!-e "$root/ops/ops/@lev[1].db"){
         close(ES);
 
 $errors = " Error, Operator <b>@lev[1]</b> does not exist.";
@@ -50,7 +50,7 @@ return $errors;
 
 }
 
-dbmopen(%U,"$root/ops/ops/@lev[1]",0777);
+dbmopen(%U,"$root/ops/ops/@lev[1].db",0777);
 
 if($U{'level'} >= $comm_rank){
 
@@ -82,6 +82,3 @@ $errors = " Level settings for Ops account <b>@lev[1]</b> successfuly updated. Y
 return $errors;
 
   exit;
-
-
-

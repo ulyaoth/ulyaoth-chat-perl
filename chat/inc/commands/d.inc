@@ -74,7 +74,7 @@ exit;
 
 
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 #########
 
@@ -330,7 +330,7 @@ print D "$ecolor<br>\n";
 close(D);
 
 
-dbmopen(%USER, "$root/online/users/$DATA{'n'}", 0777);
+dbmopen(%USER, "$root/online/users/$DATA{'n'}.db", 0777);
 
 
 $USER{'lastmsg'} = $dmsg;
@@ -344,6 +344,3 @@ dbmclose(%USER);
 
 
 return true;
-
-
-

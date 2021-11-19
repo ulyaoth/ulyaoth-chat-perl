@@ -4,7 +4,7 @@
 
 unless(@fr[1] eq '-'){
 
-dbmopen(%F,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%F,"$root/online/users/$DATA{'n'}.db",0777);
 
 if(!$F{'friends_for'}){
 
@@ -120,7 +120,7 @@ exit;
 }
 
 
-dbmopen(%F,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%F,"$root/online/users/$DATA{'n'}.db",0777);
 
 undef $F{'friends_mature'};
 
@@ -135,10 +135,3 @@ $errors = " Make friends mode disabled. Use /friends to enable again.";
 return $errors;
 
 exit;
-
-
-
-
-
-
-

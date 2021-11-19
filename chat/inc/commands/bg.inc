@@ -9,7 +9,7 @@
 if(@crayon[1] eq ''){
 
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $USER{'bgcolor'} = "";
 
@@ -30,7 +30,7 @@ $errors = " Background color unset.";
 
 @crayon[1]=substr(@crayon[1],0,15);
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $USER{'realbgcolor'} = @crayon[1];
 
@@ -49,4 +49,3 @@ return true;
 exit;
 
 }
-

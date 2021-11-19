@@ -92,7 +92,7 @@ exit;
 }
 
 
-if(!-e "$root/ops/ops/@vote[1]"){
+if(!-e "$root/ops/ops/@vote[1].db"){
 
 $errors = " Error, user <b>@vote[1]</b> is not an Operator.";
 
@@ -102,7 +102,7 @@ exit;
 }
 
 
-dbmopen(%V,"$root/ops/ops/$realnick",0777);
+dbmopen(%V,"$root/ops/ops/$realnick.db",0777);
 
 if($V{'voted'} eq $amonth){
 
@@ -143,8 +143,3 @@ $errors = " You have successfuly voted for Operator <b>@vote[1]</b> for month of
 return $errors;
 
 exit;
-
-
-
-
-

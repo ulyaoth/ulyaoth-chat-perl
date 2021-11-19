@@ -201,7 +201,7 @@ if($ipban == 1){
 
 
 
-if(-e "$root/online/banned/@ban[1]"){
+if(-e "$root/online/banned/@ban[1].db"){
 
 
 
@@ -221,7 +221,7 @@ exit;
 
 
 
-dbmopen(%BAN,"$root/online/banned/@ban[1]",0777);
+dbmopen(%BAN,"$root/online/banned/@ban[1].db",0777);
 
 
 
@@ -330,7 +330,7 @@ exit;
 
 
 
-dbmopen(%BUSER,"$root/online/users/@ban[1]",0777);
+dbmopen(%BUSER,"$root/online/users/@ban[1].db",0777);
 
 
 
@@ -442,7 +442,7 @@ close(BANNINGROOM);
 
 if($usr_lev > 0){
 
-dbmopen(%BAN,"$root/online/banned/$rnick",0777);
+dbmopen(%BAN,"$root/online/banned/$rnick.db",0777);
 
 $BAN{'bannedip'} = @ban[1];
 
@@ -462,7 +462,7 @@ $BAN{'ban'} = "*** <b>Ops</b> ban <b>$rnick</b> (@ban[1]) by <b>$DATA{'n'} ($rea
 
 dbmclose(%BAN);
 
-dbmopen(%R,"$root/ops/ops/$rnick",0777);
+dbmopen(%R,"$root/ops/ops/$rnick.db",0777);
 
 $R{'record_bans'}++;
 
@@ -531,7 +531,7 @@ exit;
 
 
 
-if(-e "$root/online/banned/$banip"){
+if(-e "$root/online/banned/$banip.db"){
 
 
 
@@ -557,7 +557,7 @@ if($banip != $rip && $rip ne ''){
 
 
 
-dbmopen(%BAN,"$root/online/banned/$rip",0777);
+dbmopen(%BAN,"$root/online/banned/$rip.db",0777);
 
 
 
@@ -599,7 +599,7 @@ dbmclose(%BAN);
 
 
 
-dbmopen(%BAN,"$root/online/banned/$banip",0777);
+dbmopen(%BAN,"$root/online/banned/$banip.db",0777);
 
 
 
@@ -679,12 +679,3 @@ return $errors;
 
 
 exit;
-
-
-
-
-
-
-
-
-
