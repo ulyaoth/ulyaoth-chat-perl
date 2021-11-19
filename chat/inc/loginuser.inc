@@ -132,7 +132,7 @@ undef $onlinet;
 
 print "Content-type: text/html\n";
 
-require "/srv/ulyaoth/chat/cookies/cookie.lib";
+require "/opt/ulyaoth/chat/cookies/cookie.lib";
 
 
 

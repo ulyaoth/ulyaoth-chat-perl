@@ -35,7 +35,7 @@ exit;
 
 
 
-if(!-e "$root/app/@app[1]"){
+if(!-e "$root/app/@app[1].db"){
 
 $errors = " Error, application with code <b>@app[1]</b><font size=\"1\" color=\"$iback\">i</font> does not exist.";
 
@@ -47,16 +47,16 @@ exit;
 
 
 
-dbmopen(%US,"$root/app/@app[1]",0777);
+dbmopen(%US,"$root/app/@app[1].db",0777);
 
 $application = $US{'application'};
 
 dbmclose(%US);
 
 
-if(-e "$root/ops/ops/$application"){
+if(-e "$root/ops/ops/$application.db"){
 
-unlink ("$root/app/@app[1]");
+unlink ("$root/app/@app[1].db");
 
 
 $errors = " Error, this application seems to be too old as someone already got Ops account with nickname <b>$application</b>. This application will be deleted now.";
@@ -67,7 +67,7 @@ exit;
 }
 
 
-rename("$root/app/@app[1]","$root/ops/ops/$application");
+rename("$root/app/@app[1].db","$root/ops/ops/$application.db");
 
 
 $errors = " Account <b>$application</b><font size=\"1\" color=\"$iback\">i</font> successfuly added in Ops database.";
@@ -75,11 +75,3 @@ $errors = " Account <b>$application</b><font size=\"1\" color=\"$iback\">i</font
 return $errors;
 
 exit;
-
-
-
-
-
-
-
-
