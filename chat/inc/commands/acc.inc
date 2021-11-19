@@ -28,7 +28,7 @@ exit;
 }
 
 
-if(!-e "$root/ops/ops/@acc[1]"){
+if(!-e "$root/ops/ops/@acc[1].db"){
         close(CHECKOP);
 
 $errors = " Error, account <b>@acc[1]</b> does not exist.";
@@ -39,7 +39,7 @@ $errors = " Error, account <b>@acc[1]</b> does not exist.";
 
        }
 
-dbmopen(%D,"$root/ops/ops/@acc[1]",0777);
+dbmopen(%D,"$root/ops/ops/@acc[1].db",0777);
 
 
 if($D{'level'} > $max_comm_rank && $level < $staff_rank){
@@ -70,7 +70,7 @@ print "<head><title>Ulyaoth Chat</title>\n</head>\n\n<body><center><b>Please be 
 
 print "<center><table width=500><tr><td>\n<FORM METHOD=\"POST\" NAME=\"msg\" ACTION=\"$location\">\n";
 
-dbmopen(%P,"$root/ops/ops/@acc[1]",0777);
+dbmopen(%P,"$root/ops/ops/@acc[1].db",0777);
 
 print "<b>Nickname: <font color=\"red\">@acc[1]</font></b><p>\n";
 
@@ -122,5 +122,3 @@ print "</body>\n";
 
 
 exit;
-
-

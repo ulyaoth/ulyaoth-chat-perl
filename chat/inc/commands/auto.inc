@@ -64,7 +64,7 @@ exit;
 if(!@auto[1]){
 
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $f = $USER{'auto_replay'};
 
@@ -84,13 +84,13 @@ exit;
 }
 
 
-dbmopen(%PREF,"$root/opspreferences/$realnick",0777);
+dbmopen(%PREF,"$root/opspreferences/$realnick.db",0777);
 
 $PREF{'auto_replay'} = $text;
 
 dbmclose(%PREF);
 
-dbmopen(%USER,"$root/online/users/$DATA{'n'}",0777);
+dbmopen(%USER,"$root/online/users/$DATA{'n'}.db",0777);
 
 $USER{'auto_replay'} = $text;
 
@@ -105,12 +105,4 @@ return $errors;
 
 
 
-exit;
-
-
-
-
-
-
-
-        
+exit;    

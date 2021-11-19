@@ -44,7 +44,7 @@ exit;
 }
 
 
-dbmopen(%PASS,"$root/ops/ops/$realnick",0777);
+dbmopen(%PASS,"$root/ops/ops/$realnick.db",0777);
 
 $s = crypt($DATA{'passw'}, "Cd");
 
@@ -78,5 +78,3 @@ $errors = " New password accepted. We suggest you relogin now. If you have any p
 return $errors;
 
 exit;
-
-

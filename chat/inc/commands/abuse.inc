@@ -29,7 +29,7 @@ exit;
 }
 
 
-if(!-e "$root/online/users/@abuse[1]"){
+if(!-e "$root/online/users/@abuse[1].db"){
      close(NOTANOP);
      
 $errors = " Error, Op <b>@abuse[1]</b> not found.";
@@ -42,7 +42,7 @@ exit;
 
 
 
-dbmopen(%USER,"$root/online/users/@abuse[1]",0777);
+dbmopen(%USER,"$root/online/users/@abuse[1].db",0777);
 
 $abuselevel = $USER{'level'};
 
@@ -165,7 +165,4 @@ $errors = " Abuse report submited. Please use /comm command to post a message on
 
 return $errors;
 
-exit;
-
-
-        
+exit;      

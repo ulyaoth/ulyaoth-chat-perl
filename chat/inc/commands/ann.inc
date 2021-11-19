@@ -96,8 +96,4 @@ return $errors;
 
 
 
-exit;
-
-
-
-        
+exit;     

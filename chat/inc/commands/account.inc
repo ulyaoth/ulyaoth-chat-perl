@@ -13,7 +13,7 @@ exit;
 
 }
 
-dbmopen(%D,"$root/ops/ops/$realnick",0777);
+dbmopen(%D,"$root/ops/ops/$realnick.db",0777);
 
 
 open(M,"$root/time/$realnick.dat");
@@ -98,5 +98,3 @@ dbmclose(%D);
 
 
 exit;
-
-
