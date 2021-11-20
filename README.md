@@ -108,7 +108,7 @@ $version = ".:: Ulyaoth chat server 1.0 ::.";
 ```
 
 Your chat should now run at:<br />
-http://"your domain"/cgi-bin/c/bin.cgi<br />
+http://"your domain"/cgi-bin/chat.cgi<br />
 
 Admin Login:<br />
 username: admin<br />
