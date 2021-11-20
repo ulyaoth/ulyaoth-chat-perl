@@ -33,7 +33,6 @@ print $body;
 
 print $method;
 
-print "<hr width=\"50%\"><center><b><a href=\"https://chat.ulyaoth.com\" target=_blank>chat.ulyaoth.com</a></b></center><p><hr width=\"50%\">\n";
 print "<b> $title ( $room )</b>\n<hr>\n";
 
 
