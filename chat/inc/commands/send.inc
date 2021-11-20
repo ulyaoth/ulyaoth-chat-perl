@@ -51,7 +51,7 @@ print <<"(END HTML FOOTER)";
 
 </table>
 </center></td></tr>
-</table><p><b><a href="/cgi-bin/c/bin.cgi?n=$DATA{'n'}&id=$DATA{'id'}&room=$DATA{'room'}">ABORT FILE TRANSFER</a></b></center>
+</table><p><b><a href="/cgi-bin/chat.cgi?n=$DATA{'n'}&id=$DATA{'id'}&room=$DATA{'room'}">ABORT FILE TRANSFER</a></b></center>
 
 </BODY>
 

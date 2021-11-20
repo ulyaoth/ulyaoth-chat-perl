@@ -26,7 +26,7 @@ $webmaster = "webmaster\@ulyaoth.com";
 
 $version = ".:: Ulyaoth chat server 1.0 ::.";  
 
-$location = 'bin.cgi';  
+$location = 'chat.cgi';  
 
 $msg_time = "200";  
 

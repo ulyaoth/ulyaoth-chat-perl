@@ -6,7 +6,7 @@ $basedir = "/srv/ulyaoth/chat/public";
 
 $root = '/opt/ulyaoth/chat';
 
-$location = "https:\/\/chat.ulyaoth.com\/cgi-bin\/c\/bin.cgi";
+$location = "https:\/\/chat.ulyaoth.com\/cgi-bin\/chat.cgi";
 
 $site = "https:\/\/chat.ulyaoth.com\/";
 
