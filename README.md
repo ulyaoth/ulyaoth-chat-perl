@@ -96,6 +96,17 @@ Stop webserver:<br />
 cat /usr/local/var/run/hiawatha.pid<br />
 kill -15 (number that command gives above)<br />
 
+You also have to update the below file and name the chat to your liking:<br />
+/opt/ulyaoth/chat/inc/variables.inc<br />
+
+Change:<br />
+```perl
+$entrytitle = "Ulyaoth Chat - please login";  
+$title = "chat.ulyaoth.com";
+$webmaster = "webmaster\@ulyaoth.com";
+$version = ".:: Ulyaoth chat server 1.0 ::.";  
+```
+
 Your chat should now run at:<br />
 http://"your domain"/cgi-bin/c/bin.cgi<br />
 
