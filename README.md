@@ -2,10 +2,10 @@
 
 A very poor installation guide:
 
-This assumes a Fedora 35 installation for example on digitalOcean.
+This assumes a Fedora 35 installation for example on digitalOcean.<br />
 Get 100$ credit on DigitalOcean: https://m.do.co/c/f47e4bda6385
 
-Please use the below instructions on your own risk, this script is very old and probably many security issues ...
+Please use the below instructions on your own risk, this script is very old and probably many security issues ...<br />
 It took me a while to get it to work on a more newer linux, feel free to update this if you can find out a better and easier way.
 
 ## Installation (non functional bash script)
@@ -85,17 +85,16 @@ find /opt/ulyaoth/chat -type d -exec chmod 755 {} \;
 
 please make sure you edit the domain "chat.ulyaoth.com" within the Hiawatha config file to your domain.<br />
 config location: /usr/local/etc/hiawatha/hiawatha.conf<br />
-<br />
+
 Test if config works:<br />
 Hiawatha -k<br />
-<br />
+
 Start webserver:<br />
 /usr/local/sbin/hiawatha<br />
-<br />
+
 Stop webserver:<br />
 cat /usr/local/var/run/hiawatha.pid<br />
 kill -15 (number that command gives above)<br />
-<br />
-<br />
+
 Your chat should now run at:<br />
 http://"your domain"/cgi-bin/c/bin.cgi<br />
