@@ -1,3 +1,5 @@
+# Ulyaoth Chat (perl)
+
 A very poor installation guide:
 
 This assumes a Fedora 35 installation for example on digitalOcean.
@@ -6,6 +8,8 @@ Get 100$ credit on DigitalOcean: https://m.do.co/c/f47e4bda6385
 Please use the below instructions on your own risk, this script is very old and probably many security issues ...
 It took me a while to get it to work on a more newer linux, feel free to update this if you can find out a better and easier way.
 
+## Installation (non functional bash script)
+```bash
 #install webserver:
 dnf install perl perl-CGI cmake libxslt-devel git sendmail
 wget https://www.hiawatha-webserver.org/files/hiawatha-11.0.tar.gz
@@ -25,6 +29,12 @@ mkdir -p /opt/ulyaoth/
 mv /root/ulyaoth-chat-perl/chat /opt/ulyaoth/
 mkdir -p /srv/ulyaoth/chat/public
 mv /root/ulyaoth-chat-perl/cgi-bin /srv/ulyaoth/chat/public/
+
+
+#copy webserver config:
+mv /root/ulyaoth-chat-perl/hiawatha/hiawatha.conf /usr/local/etc/hiawatha/hiawatha.conf
+
+#clean
 rm -rf /root/ulyaoth-chat-perl
 
 #create required directories:
@@ -71,18 +81,21 @@ find /srv/ulyaoth/chat -type f \( -name "*.cgi" \) -exec chmod 755 {} \;
 find /opt/ulyaoth/chat -type f \( -name "*.cgi" \) -exec chmod 755 {} \;
 find /opt/ulyaoth/chat -type f \( -name "*.inc" \) -exec chmod 644 {} \;
 find /opt/ulyaoth/chat -type d -exec chmod 755 {} \;
+```
 
-
-# Webserver
-start & stop webserver:
-start: hiawatha -k
-
-Stop:
-cat /usr/local/var/run/hiawatha.pid
-kill -15 (number from pid)
-
-config file:
-/usr/local/etc/hiawatha/hiawatha.conf
-
-Your chat should now run at:
-http://"your domain"/cgi-bin/c/bin.cgi
+please make sure you edit the domain "chat.ulyaoth.com" within the Hiawatha config file to your domain.<br />
+config location: /usr/local/etc/hiawatha/hiawatha.conf<br />
+<br />
+Test if config works:<br />
+Hiawatha -k<br />
+<br />
+Start webserver:<br />
+/usr/local/sbin/hiawatha<br />
+<br />
+Stop webserver:<br />
+cat /usr/local/var/run/hiawatha.pid<br />
+kill -15 (number that command gives above)<br />
+<br />
+<br />
+Your chat should now run at:<br />
+http://"your domain"/cgi-bin/c/bin.cgi<br />
