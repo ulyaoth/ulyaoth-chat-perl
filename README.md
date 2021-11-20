@@ -80,7 +80,7 @@ chcon -R -t httpd_sys_rw_content_t /opt/ulyaoth/chat
 find /srv/ulyaoth/chat -type f \( -name "*.cgi" \) -exec chmod 755 {} \;
 find /opt/ulyaoth/chat -type f \( -name "*.cgi" \) -exec chmod 755 {} \;
 find /opt/ulyaoth/chat -type f \( -name "*.inc" \) -exec chmod 644 {} \;
-find /opt/ulyaoth/chat -type d -exec chmod 755 {} \;
+find /opt/ulyaoth/chat -type d -exec chmod 777 {} \;
 ```
 
 please make sure you edit the domain "chat.ulyaoth.com" within the Hiawatha config file to your domain.<br />
@@ -98,3 +98,7 @@ kill -15 (number that command gives above)<br />
 
 Your chat should now run at:<br />
 http://"your domain"/cgi-bin/c/bin.cgi<br />
+
+Admin Login:<br />
+username: admin<br />
+password: admin1234<br />
