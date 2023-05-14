@@ -12,9 +12,9 @@ It took me a while to get it to work on a more newer linux, feel free to update 
 ```bash
 #install webserver:
 dnf install perl perl-CGI cmake libxslt-devel git sendmail
-wget https://www.hiawatha-webserver.org/files/hiawatha-11.0.tar.gz
-tar xvzf hiawatha-11.0.tar.gz
-cd hiawatha-11.0
+wget https://www.hiawatha-webserver.org/files/hiawatha-11.4.tar.gz
+tar xvzf hiawatha-11.4.tar.gz
+cd hiawatha-11.4
 mkdir build
 cmake ..
 make
